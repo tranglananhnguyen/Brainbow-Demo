@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publishing Portal - Brainbow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="rainbow-icon">🌈</span>
+                    <span class="brand-text">Brainbow</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="publishing-portal.html" class="active">Dashboard</a></li>
+                <li><a href="#manuscripts">Manuscripts</a></li>
+                <li><a href="#production">Production</a></li>
+                <li><a href="#submissions">Submissions</a></li>
+                <li><a href="index.html" class="btn-login">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard">
+        <div class="dashboard-header">
+            <div class="container">
+                <div class="dashboard-title">
+                    <span class="dashboard-icon">📖</span>
+                    <div>
+                        <h1>Publishing Portal</h1>
+                        <p style="color: #6b7280; margin: 0;">Manuscript management and publication workflow</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="container">
+                <!-- Publishing Metrics -->
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <h3>Active Projects</h3>
+                        <div class="stat-value">18</div>
+                        <p style="color: #6b7280; margin-top: 0.5rem;">In production pipeline</p>
+                    </div>
+                    <div class="stat-card warning">
+                        <h3>Pending Reviews</h3>
+                        <div class="stat-value">7</div>
+                        <p style="color: #f59e0b; margin-top: 0.5rem;">Require attention</p>
+                    </div>
+                    <div class="stat-card success">
+                        <h3>Upcoming Releases</h3>
+                        <div class="stat-value">5</div>
+                        <p style="color: #10b981; margin-top: 0.5rem;">Next quarter</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>New Submissions</h3>
+                        <div class="stat-value">23</div>
+                        <p style="color: #6b7280; margin-top: 0.5rem;">This month</p>
+                    </div>
+                </div>
+
+                <!-- Manuscript Pipeline -->
+                <div class="content-card">
+                    <h2>📝 Manuscript Pipeline</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Author</th>
+                                    <th>Genre</th>
+                                    <th>Stage</th>
+                                    <th>Target Release</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>The Last Symphony</strong></td>
+                                    <td>Michael Torres</td>
+                                    <td>Historical Fiction</td>
+                                    <td>Copy Editing</td>
+                                    <td>Q1 2026</td>
+                                    <td><span class="badge badge-info">On Track</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Digital Horizons</strong></td>
+                                    <td>Emma Chen</td>
+                                    <td>Technology</td>
+                                    <td>Design</td>
+                                    <td>Q2 2026</td>
+                                    <td><span class="badge badge-info">On Track</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Coastal Memories</strong></td>
+                                    <td>Lisa Anderson</td>
+                                    <td>Contemporary</td>
+                                    <td>Final Review</td>
+                                    <td>Q4 2025</td>
+                                    <td><span class="badge badge-warning">Review Needed</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>The Science of Dreams</strong></td>
+                                    <td>Dr. Robert Kim</td>
+                                    <td>Non-Fiction</td>
+                                    <td>Proofreading</td>
+                                    <td>Q1 2026</td>
+                                    <td><span class="badge badge-info">On Track</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Moonlight Tales</strong></td>
+                                    <td>Jennifer Walsh</td>
+                                    <td>Children's</td>
+                                    <td>Illustration</td>
+                                    <td>Q3 2026</td>
+                                    <td><span class="badge badge-success">Ahead</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <button class="btn btn-primary">Add New Project</button>
+                        <button class="btn btn-secondary" style="margin-left: 1rem;">View All Projects</button>
+                    </div>
+                </div>
+
+                <!-- Production Schedule -->
+                <div class="content-card">
+                    <h2>📅 Production Schedule</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(99, 102, 241, 0.05); border-left: 4px solid #6366f1; border-radius: 0.75rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                <div>
+                                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem;">Coastal Memories - Final Review</h3>
+                                    <p style="margin: 0; color: #6b7280;">Due: October 20, 2025</p>
+                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280;">Assigned to: Editorial Team</p>
+                                </div>
+                                <span class="badge badge-warning">2 days remaining</span>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 1.5rem; background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10b981; border-radius: 0.75rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                <div>
+                                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem;">The Last Symphony - Copy Editing</h3>
+                                    <p style="margin: 0; color: #6b7280;">Due: October 28, 2025</p>
+                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280;">Assigned to: Copy Editing Team</p>
+                                </div>
+                                <span class="badge badge-success">On Schedule</span>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 1.5rem; background: rgba(59, 130, 246, 0.05); border-left: 4px solid #3b82f6; border-radius: 0.75rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                <div>
+                                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem;">Moonlight Tales - Illustration Review</h3>
+                                    <p style="margin: 0; color: #6b7280;">Due: November 5, 2025</p>
+                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280;">Assigned to: Design Team</p>
+                                </div>
+                                <span class="badge badge-info">In Progress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Submissions -->
+                <div class="content-card">
+                    <h2>📬 Recent Manuscript Submissions</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Submission Date</th>
+                                    <th>Title</th>
+                                    <th>Author</th>
+                                    <th>Genre</th>
+                                    <th>Word Count</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Oct 15, 2025</td>
+                                    <td><strong>Whispers in the Wind</strong></td>
+                                    <td>Amanda Rivers</td>
+                                    <td>Romance</td>
+                                    <td>82,000</td>
+                                    <td><span class="badge badge-warning">Under Review</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 14, 2025</td>
+                                    <td><strong>The Quantum Paradox</strong></td>
+                                    <td>Dr. James Liu</td>
+                                    <td>Science</td>
+                                    <td>95,000</td>
+                                    <td><span class="badge badge-warning">Under Review</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 12, 2025</td>
+                                    <td><strong>Cooking with Heart</strong></td>
+                                    <td>Maria Garcia</td>
+                                    <td>Cookbook</td>
+                                    <td>45,000</td>
+                                    <td><span class="badge badge-success">Approved for Review</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 10, 2025</td>
+                                    <td><strong>Mountain Trails</strong></td>
+                                    <td>David Brown</td>
+                                    <td>Travel</td>
+                                    <td>68,000</td>
+                                    <td><span class="badge badge-info">Initial Assessment</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <button class="btn btn-primary">Review Submissions</button>
+                        <button class="btn btn-secondary" style="margin-left: 1rem;">Submission Guidelines</button>
+                    </div>
+                </div>
+
+                <!-- Upcoming Releases -->
+                <div class="content-card">
+                    <h2>🚀 Upcoming Releases</h2>
+                    <div style="display: grid; gap: 1.5rem;">
+                        <div style="display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; padding: 1.5rem; background: #f9fafb; border-radius: 0.75rem; border: 1px solid #e5e7eb;">
+                            <div style="width: 80px; height: 120px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                                📚
+                            </div>
+                            <div>
+                                <h3 style="margin: 0 0 0.5rem 0; font-size: 1.25rem;">Coastal Memories</h3>
+                                <p style="margin: 0 0 0.5rem 0; color: #6b7280;">by Lisa Anderson • Contemporary Fiction</p>
+                                <p style="margin: 0 0 0.5rem 0; color: #6b7280;">📅 Release Date: November 15, 2025</p>
+                                <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">A heartwarming story of family, love, and rediscovery along the coast.</p>
+                                <div style="margin-top: 1rem;">
+                                    <span class="badge badge-success">Ready for Print</span>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                            </div>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; padding: 1.5rem; background: #f9fafb; border-radius: 0.75rem; border: 1px solid #e5e7eb;">
+                            <div style="width: 80px; height: 120px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                                📚
+                            </div>
+                            <div>
+                                <h3 style="margin: 0 0 0.5rem 0; font-size: 1.25rem;">Autumn Reflections</h3>
+                                <p style="margin: 0 0 0.5rem 0; color: #6b7280;">by Patricia Moore • Poetry</p>
+                                <p style="margin: 0 0 0.5rem 0; color: #6b7280;">📅 Release Date: December 1, 2025</p>
+                                <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">A collection of poems celebrating the beauty of change and nature.</p>
+                                <div style="margin-top: 1rem;">
+                                    <span class="badge badge-info">In Final Production</span>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

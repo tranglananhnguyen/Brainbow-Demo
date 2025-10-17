@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Portal - Brainbow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="rainbow-icon">🌈</span>
+                    <span class="brand-text">Brainbow</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="warehouse-portal.html" class="active">Dashboard</a></li>
+                <li><a href="#inventory">Inventory</a></li>
+                <li><a href="#shipping">Shipping</a></li>
+                <li><a href="#receiving">Receiving</a></li>
+                <li><a href="index.html" class="btn-login">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard">
+        <div class="dashboard-header">
+            <div class="container">
+                <div class="dashboard-title">
+                    <span class="dashboard-icon">📦</span>
+                    <div>
+                        <h1>Warehouse Management Portal</h1>
+                        <p style="color: #6b7280; margin: 0;">Central Distribution Center</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="container">
+                <!-- Warehouse Metrics -->
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <h3>Total Inventory</h3>
+                        <div class="stat-value">54,382</div>
+                        <p style="color: #6b7280; margin-top: 0.5rem;">Units in warehouse</p>
+                    </div>
+                    <div class="stat-card warning">
+                        <h3>Pending Shipments</h3>
+                        <div class="stat-value">23</div>
+                        <p style="color: #f59e0b; margin-top: 0.5rem;">7 ship today</p>
+                    </div>
+                    <div class="stat-card success">
+                        <h3>Incoming Deliveries</h3>
+                        <div class="stat-value">5</div>
+                        <p style="color: #10b981; margin-top: 0.5rem;">Expected today</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Warehouse Capacity</h3>
+                        <div class="stat-value">72%</div>
+                        <p style="color: #6b7280; margin-top: 0.5rem;">Utilization rate</p>
+                    </div>
+                </div>
+
+                <!-- Today's Tasks -->
+                <div class="content-card">
+                    <h2>✅ Today's Priority Tasks</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1rem; background: rgba(239, 68, 68, 0.05); border-left: 4px solid #ef4444; border-radius: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                <div>
+                                    <strong>Urgent: Store #12 Restocking</strong>
+                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280;">15 SKUs below critical level - Ship by 3 PM</p>
+                                </div>
+                                <span class="badge badge-danger">High Priority</span>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 1rem; background: rgba(245, 158, 11, 0.05); border-left: 4px solid #f59e0b; border-radius: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                <div>
+                                    <strong>Incoming Shipment: Penguin Random House</strong>
+                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280;">Expected arrival: 11:00 AM - 245 units</p>
+                                </div>
+                                <span class="badge badge-warning">Medium Priority</span>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 1rem; background: rgba(59, 130, 246, 0.05); border-left: 4px solid #3b82f6; border-radius: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                <div>
+                                    <strong>Weekly Inventory Audit - Zone B</strong>
+                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280;">Scheduled for 2:00 PM - Fiction section</p>
+                                </div>
+                                <span class="badge badge-info">Scheduled</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending Shipments -->
+                <div class="content-card">
+                    <h2>🚚 Pending Outbound Shipments</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Shipment ID</th>
+                                    <th>Destination</th>
+                                    <th>Items</th>
+                                    <th>Weight</th>
+                                    <th>Ship Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>SHP-2025-892</strong></td>
+                                    <td>Store #12 - Downtown</td>
+                                    <td>87</td>
+                                    <td>145 lbs</td>
+                                    <td>Oct 17, 2025</td>
+                                    <td><span class="badge badge-danger">Ready to Ship</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SHP-2025-893</strong></td>
+                                    <td>Store #08 - Uptown</td>
+                                    <td>52</td>
+                                    <td>89 lbs</td>
+                                    <td>Oct 17, 2025</td>
+                                    <td><span class="badge badge-warning">Packing</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SHP-2025-894</strong></td>
+                                    <td>Store #23 - Westside</td>
+                                    <td>134</td>
+                                    <td>210 lbs</td>
+                                    <td>Oct 18, 2025</td>
+                                    <td><span class="badge badge-info">Preparing</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>SHP-2025-895</strong></td>
+                                    <td>Store #15 - Eastgate</td>
+                                    <td>68</td>
+                                    <td>112 lbs</td>
+                                    <td>Oct 18, 2025</td>
+                                    <td><span class="badge badge-info">Preparing</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <button class="btn btn-primary">Process Next Shipment</button>
+                        <button class="btn btn-secondary" style="margin-left: 1rem;">Generate Packing List</button>
+                    </div>
+                </div>
+
+                <!-- Inventory Alerts -->
+                <div class="content-card">
+                    <h2>⚠️ Inventory Alerts</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>SKU</th>
+                                    <th>Product Name</th>
+                                    <th>Current Stock</th>
+                                    <th>Reorder Point</th>
+                                    <th>Action Required</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>BK-2025-1234</strong></td>
+                                    <td>The Midnight Library</td>
+                                    <td>45</td>
+                                    <td>100</td>
+                                    <td><span class="badge badge-warning">Low Stock</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>BK-2025-5678</strong></td>
+                                    <td>Where the Crawdads Sing</td>
+                                    <td>12</td>
+                                    <td>75</td>
+                                    <td><span class="badge badge-danger">Critical</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>BK-2025-9012</strong></td>
+                                    <td>Atomic Habits</td>
+                                    <td>28</td>
+                                    <td>80</td>
+                                    <td><span class="badge badge-warning">Low Stock</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>BK-2025-3456</strong></td>
+                                    <td>Educated: A Memoir</td>
+                                    <td>62</td>
+                                    <td>90</td>
+                                    <td><span class="badge badge-warning">Low Stock</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <button class="btn btn-primary">Generate Reorder Report</button>
+                        <button class="btn btn-secondary" style="margin-left: 1rem;">View All Inventory</button>
+                    </div>
+                </div>
+
+                <!-- Recent Receiving -->
+                <div class="content-card">
+                    <h2>📥 Recent Receiving Activity</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>PO Number</th>
+                                    <th>Supplier</th>
+                                    <th>Items Received</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Oct 17, 2025</td>
+                                    <td><strong>PO-2025-1237</strong></td>
+                                    <td>HarperCollins</td>
+                                    <td>187</td>
+                                    <td><span class="badge badge-success">Processed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 16, 2025</td>
+                                    <td><strong>PO-2025-1236</strong></td>
+                                    <td>Simon & Schuster</td>
+                                    <td>245</td>
+                                    <td><span class="badge badge-success">Processed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 15, 2025</td>
+                                    <td><strong>PO-2025-1235</strong></td>
+                                    <td>Penguin Random House</td>
+                                    <td>312</td>
+                                    <td><span class="badge badge-success">Processed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

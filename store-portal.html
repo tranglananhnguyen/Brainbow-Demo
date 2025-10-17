@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Staff Portal - Brainbow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="rainbow-icon">🌈</span>
+                    <span class="brand-text">Brainbow</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="store-portal.html" class="active">Dashboard</a></li>
+                <li><a href="#pos">POS</a></li>
+                <li><a href="#customers">Customers</a></li>
+                <li><a href="#inventory">Quick Lookup</a></li>
+                <li><a href="index.html" class="btn-login">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard">
+        <div class="dashboard-header">
+            <div class="container">
+                <div class="dashboard-title">
+                    <span class="dashboard-icon">🛍️</span>
+                    <div>
+                        <h1>Store Staff Portal</h1>
+                        <p style="color: #6b7280; margin: 0;">Daily operations and customer service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="container">
+                <!-- Today's Metrics -->
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <h3>Today's Transactions</h3>
+                        <div class="stat-value">47</div>
+                        <p style="color: #6b7280; margin-top: 0.5rem;">Last updated: 2 min ago</p>
+                    </div>
+                    <div class="stat-card success">
+                        <h3>Total Sales</h3>
+                        <div class="stat-value">$1,842</div>
+                        <p style="color: #10b981; margin-top: 0.5rem;">↑ 15% vs yesterday</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Avg. Transaction</h3>
+                        <div class="stat-value">$39.19</div>
+                        <p style="color: #6b7280; margin-top: 0.5rem;">Per customer</p>
+                    </div>
+                    <div class="stat-card warning">
+                        <h3>Customer Inquiries</h3>
+                        <div class="stat-value">12</div>
+                        <p style="color: #6b7280; margin-top: 0.5rem;">3 pending response</p>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="content-card">
+                    <h2>⚡ Quick Actions</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <button class="btn btn-primary" style="padding: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 2rem;">🛒</span>
+                            <span>New Transaction</span>
+                        </button>
+                        <button class="btn btn-secondary" style="padding: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 2rem;">🔍</span>
+                            <span>Book Lookup</span>
+                        </button>
+                        <button class="btn btn-secondary" style="padding: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 2rem;">👤</span>
+                            <span>Customer Profile</span>
+                        </button>
+                        <button class="btn btn-secondary" style="padding: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 2rem;">↩️</span>
+                            <span>Process Return</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Recent Transactions -->
+                <div class="content-card">
+                    <h2>📊 Recent Transactions</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Transaction ID</th>
+                                    <th>Items</th>
+                                    <th>Amount</th>
+                                    <th>Payment Method</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2:45 PM</td>
+                                    <td><strong>TXN-45892</strong></td>
+                                    <td>3</td>
+                                    <td>$67.50</td>
+                                    <td>Credit Card</td>
+                                    <td><span class="badge badge-success">Complete</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2:32 PM</td>
+                                    <td><strong>TXN-45891</strong></td>
+                                    <td>1</td>
+                                    <td>$24.99</td>
+                                    <td>Cash</td>
+                                    <td><span class="badge badge-success">Complete</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2:18 PM</td>
+                                    <td><strong>TXN-45890</strong></td>
+                                    <td>5</td>
+                                    <td>$142.75</td>
+                                    <td>Debit Card</td>
+                                    <td><span class="badge badge-success">Complete</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2:05 PM</td>
+                                    <td><strong>TXN-45889</strong></td>
+                                    <td>2</td>
+                                    <td>$45.00</td>
+                                    <td>Gift Card</td>
+                                    <td><span class="badge badge-success">Complete</span></td>
+                                </tr>
+                                <tr>
+                                    <td>1:52 PM</td>
+                                    <td><strong>TXN-45888</strong></td>
+                                    <td>1</td>
+                                    <td>$18.99</td>
+                                    <td>Credit Card</td>
+                                    <td><span class="badge badge-success">Complete</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Customer Inquiries -->
+                <div class="content-card">
+                    <h2>💬 Recent Customer Inquiries</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <strong>Looking for "The Midnight Library"</strong>
+                                <span class="badge badge-warning">Pending</span>
+                            </div>
+                            <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">Customer wants to know if we have this title in stock</p>
+                            <div style="margin-top: 0.75rem;">
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Check Inventory</button>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 1rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                            <div style="display: flex; justify-space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <strong>Book club recommendation request</strong>
+                                <span class="badge badge-info">In Progress</span>
+                            </div>
+                            <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">Group of 10 looking for contemporary fiction recommendations</p>
+                            <div style="margin-top: 0.75rem;">
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 1rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                <strong>Gift wrapping service inquiry</strong>
+                                <span class="badge badge-success">Resolved</span>
+                            </div>
+                            <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">Customer satisfied with gift wrapping options</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Today's Schedule -->
+                <div class="content-card">
+                    <h2>📅 Today's Schedule</h2>
+                    <div style="display: grid; gap: 0.75rem;">
+                        <div style="padding: 1rem; background: rgba(99, 102, 241, 0.05); border-left: 4px solid #6366f1; border-radius: 0.5rem;">
+                            <strong>10:00 AM - Inventory Count</strong>
+                            <p style="margin: 0.5rem 0 0 0; color: #6b7280;">Children's section stock check</p>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(99, 102, 241, 0.05); border-left: 4px solid #6366f1; border-radius: 0.5rem;">
+                            <strong>2:00 PM - Customer Service Training</strong>
+                            <p style="margin: 0.5rem 0 0 0; color: #6b7280;">New POS system features</p>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10b981; border-radius: 0.5rem;">
+                            <strong>4:00 PM - Stock Receiving</strong>
+                            <p style="margin: 0.5rem 0 0 0; color: #6b7280;">New shipment arrival - Process and shelve</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

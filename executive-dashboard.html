@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Dashboard - Brainbow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="rainbow-icon">🌈</span>
+                    <span class="brand-text">Brainbow</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="executive-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="#analytics">Analytics</a></li>
+                <li><a href="#reports">Reports</a></li>
+                <li><a href="#kpis">KPIs</a></li>
+                <li><a href="index.html" class="btn-login">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard">
+        <div class="dashboard-header">
+            <div class="container">
+                <div class="dashboard-title">
+                    <span class="dashboard-icon">👔</span>
+                    <div>
+                        <h1>Executive Dashboard</h1>
+                        <p style="color: #6b7280; margin: 0;">Strategic oversight and performance analysis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="container">
+                <!-- Key Metrics -->
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <h3>Total Revenue</h3>
+                        <div class="stat-value">$2.4M</div>
+                        <p style="color: #10b981; margin-top: 0.5rem;">↑ 12.5% from last month</p>
+                    </div>
+                    <div class="stat-card success">
+                        <h3>Active Stores</h3>
+                        <div class="stat-value">52</div>
+                        <p style="color: #10b981; margin-top: 0.5rem;">↑ 3 new franchises</p>
+                    </div>
+                    <div class="stat-card warning">
+                        <h3>Inventory Turnover</h3>
+                        <div class="stat-value">8.2x</div>
+                        <p style="color: #f59e0b; margin-top: 0.5rem;">→ Stable</p>
+                    </div>
+                    <div class="stat-card danger">
+                        <h3>Customer Satisfaction</h3>
+                        <div class="stat-value">94.2%</div>
+                        <p style="color: #10b981; margin-top: 0.5rem;">↑ 2.3% improvement</p>
+                    </div>
+                </div>
+
+                <!-- Performance by Store Type -->
+                <div class="content-card">
+                    <h2>📊 Performance by Store Type</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Store Type</th>
+                                    <th>Total Revenue</th>
+                                    <th>Units Sold</th>
+                                    <th>Avg. Transaction</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Flagship Stores</strong></td>
+                                    <td>$1,250,000</td>
+                                    <td>45,230</td>
+                                    <td>$27.64</td>
+                                    <td><span class="badge badge-success">Excellent</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Franchise Partners</strong></td>
+                                    <td>$980,500</td>
+                                    <td>38,120</td>
+                                    <td>$25.72</td>
+                                    <td><span class="badge badge-success">Strong</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Online Store</strong></td>
+                                    <td>$169,500</td>
+                                    <td>8,450</td>
+                                    <td>$20.06</td>
+                                    <td><span class="badge badge-warning">Growing</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Strategic KPIs -->
+                <div class="content-card">
+                    <h2>🎯 Strategic KPIs - Q4 2025</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>KPI</th>
+                                    <th>Target</th>
+                                    <th>Current</th>
+                                    <th>Progress</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Quarterly Revenue Growth</strong></td>
+                                    <td>$3.0M</td>
+                                    <td>$2.4M</td>
+                                    <td>80%</td>
+                                    <td><span class="badge badge-info">On Track</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>New Franchise Openings</strong></td>
+                                    <td>5</td>
+                                    <td>3</td>
+                                    <td>60%</td>
+                                    <td><span class="badge badge-warning">Behind</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Author Events Hosted</strong></td>
+                                    <td>24</td>
+                                    <td>28</td>
+                                    <td>117%</td>
+                                    <td><span class="badge badge-success">Exceeding</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Inventory Accuracy</strong></td>
+                                    <td>98%</td>
+                                    <td>96.5%</td>
+                                    <td>98.5%</td>
+                                    <td><span class="badge badge-info">Near Target</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Employee Training Completion</strong></td>
+                                    <td>100%</td>
+                                    <td>92%</td>
+                                    <td>92%</td>
+                                    <td><span class="badge badge-warning">In Progress</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Recent Alerts & Actions -->
+                <div class="content-card">
+                    <h2>🔔 Recent Alerts & Actions Required</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1rem; background: rgba(239, 68, 68, 0.05); border-left: 4px solid #ef4444; border-radius: 0.5rem;">
+                            <strong>Low Stock Alert</strong>
+                            <p style="margin: 0.5rem 0 0 0; color: #6b7280;">15 SKUs below reorder threshold across 8 locations</p>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(245, 158, 11, 0.05); border-left: 4px solid #f59e0b; border-radius: 0.5rem;">
+                            <strong>Franchise Training Due</strong>
+                            <p style="margin: 0.5rem 0 0 0; color: #6b7280;">3 franchise locations pending Q4 compliance training</p>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(59, 130, 246, 0.05); border-left: 4px solid #3b82f6; border-radius: 0.5rem;">
+                            <strong>Upcoming Board Meeting</strong>
+                            <p style="margin: 0.5rem 0 0 0; color: #6b7280;">October 25, 2025 - Q4 performance review preparation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

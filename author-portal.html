@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author Portal - Brainbow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="rainbow-icon">🌈</span>
+                    <span class="brand-text">Brainbow</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="author-portal.html" class="active">Dashboard</a></li>
+                <li><a href="#events">My Events</a></li>
+                <li><a href="#sales">Sales</a></li>
+                <li><a href="#books">My Books</a></li>
+                <li><a href="index.html" class="btn-login">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard">
+        <div class="dashboard-header">
+            <div class="container">
+                <div class="dashboard-title">
+                    <span class="dashboard-icon">✍️</span>
+                    <div>
+                        <h1>Author Portal</h1>
+                        <p style="color: #6b7280; margin: 0;">Welcome back, Sarah Johnson</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="container">
+                <!-- Author Metrics -->
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <h3>Books Sold (This Month)</h3>
+                        <div class="stat-value">1,247</div>
+                        <p style="color: #10b981; margin-top: 0.5rem;">↑ 18% vs last month</p>
+                    </div>
+                    <div class="stat-card success">
+                        <h3>Upcoming Events</h3>
+                        <div class="stat-value">4</div>
+                        <p style="color: #6b7280; margin-top: 0.5rem;">Next 60 days</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Earnings</h3>
+                        <div class="stat-value">$8,742</div>
+                        <p style="color: #6b7280; margin-top: 0.5rem;">October 2025</p>
+                    </div>
+                    <div class="stat-card warning">
+                        <h3>Event Requests</h3>
+                        <div class="stat-value">3</div>
+                        <p style="color: #f59e0b; margin-top: 0.5rem;">Pending response</p>
+                    </div>
+                </div>
+
+                <!-- My Books -->
+                <div class="content-card">
+                    <h2>📚 My Published Books</h2>
+                    <div style="display: grid; gap: 1.5rem;">
+                        <div style="display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; padding: 1.5rem; background: #f9fafb; border-radius: 0.75rem; border: 1px solid #e5e7eb;">
+                            <div style="width: 80px; height: 120px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                                📖
+                            </div>
+                            <div>
+                                <h3 style="margin: 0 0 0.5rem 0; font-size: 1.25rem;">Mysteries of the Past</h3>
+                                <p style="margin: 0 0 0.5rem 0; color: #6b7280;">Fiction • Published: March 2024</p>
+                                <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">A thrilling journey through historical mysteries and ancient secrets.</p>
+                                <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                                    <span class="badge badge-success">In Stock</span>
+                                    <span style="color: #6b7280; font-size: 0.875rem;">Total Sold: 4,523 units</span>
+                                </div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 1.5rem; font-weight: 700; color: #6366f1;">$24.99</div>
+                                <button class="btn btn-secondary" style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                            </div>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; padding: 1.5rem; background: #f9fafb; border-radius: 0.75rem; border: 1px solid #e5e7eb;">
+                            <div style="width: 80px; height: 120px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                                📖
+                            </div>
+                            <div>
+                                <h3 style="margin: 0 0 0.5rem 0; font-size: 1.25rem;">Echoes of Tomorrow</h3>
+                                <p style="margin: 0 0 0.5rem 0; color: #6b7280;">Science Fiction • Published: September 2023</p>
+                                <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">A futuristic tale of humanity's greatest challenges and triumphs.</p>
+                                <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                                    <span class="badge badge-warning">Low Stock</span>
+                                    <span style="color: #6b7280; font-size: 0.875rem;">Total Sold: 6,892 units</span>
+                                </div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 1.5rem; font-weight: 700; color: #6366f1;">$22.99</div>
+                                <button class="btn btn-secondary" style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Events -->
+                <div class="content-card">
+                    <h2>📅 Upcoming Events</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>Date & Time</th>
+                                    <th>Location</th>
+                                    <th>Expected Attendance</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Book Signing</strong></td>
+                                    <td>Oct 25, 2025 - 2:00 PM</td>
+                                    <td>Downtown Store</td>
+                                    <td>~50 people</td>
+                                    <td><span class="badge badge-success">Confirmed</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Author Talk & Q&A</strong></td>
+                                    <td>Nov 8, 2025 - 6:30 PM</td>
+                                    <td>Flagship Store</td>
+                                    <td>~100 people</td>
+                                    <td><span class="badge badge-success">Confirmed</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Virtual Reading</strong></td>
+                                    <td>Nov 15, 2025 - 7:00 PM</td>
+                                    <td>Online Event</td>
+                                    <td>~200 people</td>
+                                    <td><span class="badge badge-info">Scheduled</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Book Club Discussion</strong></td>
+                                    <td>Dec 3, 2025 - 3:00 PM</td>
+                                    <td>Westside Store</td>
+                                    <td>~30 people</td>
+                                    <td><span class="badge badge-warning">Pending Confirmation</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <button class="btn btn-primary">Request New Event</button>
+                        <button class="btn btn-secondary" style="margin-left: 1rem;">View Calendar</button>
+                    </div>
+                </div>
+
+                <!-- Event Requests -->
+                <div class="content-card">
+                    <h2>✉️ Pending Event Requests</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: #f9fafb; border-radius: 0.75rem; border: 1px solid #e5e7eb;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                                <div>
+                                    <h3 style="margin: 0 0 0.5rem 0;">Book Signing - Uptown Store</h3>
+                                    <p style="margin: 0; color: #6b7280;">📅 Proposed: November 18, 2025 at 4:00 PM</p>
+                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280;">Expected duration: 2 hours • Setup provided</p>
+                                </div>
+                                <span class="badge badge-warning">Awaiting Response</span>
+                            </div>
+                            <div style="display: flex; gap: 0.75rem;">
+                                <button class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Accept</button>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Decline</button>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Propose Changes</button>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 1.5rem; background: #f9fafb; border-radius: 0.75rem; border: 1px solid #e5e7eb;">
+                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                                <div>
+                                    <h3 style="margin: 0 0 0.5rem 0;">Workshop: Creative Writing</h3>
+                                    <p style="margin: 0; color: #6b7280;">📅 Proposed: December 10, 2025 at 10:00 AM</p>
+                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280;">Expected duration: 3 hours • Workshop space available</p>
+                                </div>
+                                <span class="badge badge-warning">Awaiting Response</span>
+                            </div>
+                            <div style="display: flex; gap: 0.75rem;">
+                                <button class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Accept</button>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Decline</button>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Propose Changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sales Analytics -->
+                <div class="content-card">
+                    <h2>📊 Sales Performance</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Month</th>
+                                    <th>Units Sold</th>
+                                    <th>Revenue</th>
+                                    <th>Royalties</th>
+                                    <th>Trend</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>October 2025</strong></td>
+                                    <td>1,247</td>
+                                    <td>$29,876</td>
+                                    <td>$8,742</td>
+                                    <td><span style="color: #10b981;">↑ 18%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>September 2025</strong></td>
+                                    <td>1,056</td>
+                                    <td>$25,344</td>
+                                    <td>$7,401</td>
+                                    <td><span style="color: #10b981;">↑ 12%</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>August 2025</strong></td>
+                                    <td>943</td>
+                                    <td>$22,632</td>
+                                    <td>$6,609</td>
+                                    <td><span style="color: #6b7280;">→ 2%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

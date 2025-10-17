@@ -21,9 +21,10 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="publishing-portal.html" class="active">Dashboard</a></li>
-                <li><a href="#manuscripts">Manuscripts</a></li>
-                <li><a href="#production">Production</a></li>
-                <li><a href="#submissions">Submissions</a></li>
+                <li><a href="#stock-generation">Stock Generation</a></li>
+                <li><a href="#training">Staff Training</a></li>
+                <li><a href="#delivery-slots">Delivery Slots</a></li>
+                <li><a href="#reconciliation">Reconciliation</a></li>
                 <li><a href="index.html" class="btn-login">Logout</a></li>
             </ul>
             <div class="hamburger">
@@ -73,68 +74,191 @@
                     </div>
                 </div>
 
-                <!-- Manuscript Pipeline -->
+                <!-- Generate Stock for Warehouse -->
                 <div class="content-card">
-                    <h2>📝 Manuscript Pipeline</h2>
-                    <div class="table-wrapper">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Title</th>
-                                    <th>Author</th>
-                                    <th>Genre</th>
-                                    <th>Stage</th>
-                                    <th>Target Release</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>The Last Symphony</strong></td>
-                                    <td>Michael Torres</td>
-                                    <td>Historical Fiction</td>
-                                    <td>Copy Editing</td>
-                                    <td>Q1 2026</td>
-                                    <td><span class="badge badge-info">On Track</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Digital Horizons</strong></td>
-                                    <td>Emma Chen</td>
-                                    <td>Technology</td>
-                                    <td>Design</td>
-                                    <td>Q2 2026</td>
-                                    <td><span class="badge badge-info">On Track</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Coastal Memories</strong></td>
-                                    <td>Lisa Anderson</td>
-                                    <td>Contemporary</td>
-                                    <td>Final Review</td>
-                                    <td>Q4 2025</td>
-                                    <td><span class="badge badge-warning">Review Needed</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>The Science of Dreams</strong></td>
-                                    <td>Dr. Robert Kim</td>
-                                    <td>Non-Fiction</td>
-                                    <td>Proofreading</td>
-                                    <td>Q1 2026</td>
-                                    <td><span class="badge badge-info">On Track</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Moonlight Tales</strong></td>
-                                    <td>Jennifer Walsh</td>
-                                    <td>Children's</td>
-                                    <td>Illustration</td>
-                                    <td>Q3 2026</td>
-                                    <td><span class="badge badge-success">Ahead</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <h2>📦 Generate Stock for Warehouse</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(99, 102, 241, 0.05); border-left: 4px solid #6366f1; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #6366f1;">🏭 Stock Generation Operations</h3>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 0.5rem 0;">New Release Stock</h4>
+                                    <p style="margin: 0 0 0.5rem 0; color: #6b7280;">Coastal Memories - 2,500 units</p>
+                                    <p style="margin: 0 0 0.5rem 0; color: #6b7280;">Status: Ready for printing</p>
+                                    <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Generate Stock</button>
+                                </div>
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 0.5rem 0;">Replenishment Stock</h4>
+                                    <p style="margin: 0 0 0.5rem 0; color: #6b7280;">The Last Symphony - 1,800 units</p>
+                                    <p style="margin: 0 0 0.5rem 0; color: #6b7280;">Status: In production</p>
+                                    <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Generate Stock</button>
+                                </div>
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 0.5rem 0;">Bulk Generation</h4>
+                                    <p style="margin: 0 0 0.5rem 0; color: #6b7280;">Multiple titles - 15,000 units</p>
+                                    <p style="margin: 0 0 0.5rem 0; color: #6b7280;">Status: Scheduled</p>
+                                    <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Schedule Bulk</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div style="margin-top: 1.5rem;">
-                        <button class="btn btn-primary">Add New Project</button>
-                        <button class="btn btn-secondary" style="margin-left: 1rem;">View All Projects</button>
+                </div>
+
+                <!-- Staff Training -->
+                <div class="content-card">
+                    <h2>🎓 Staff Training</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10b981; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #10b981;">📚 Training Management</h3>
+                            <div style="display: grid; gap: 1rem;">
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Current Training Programs</h4>
+                                    <div class="table-wrapper">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Training Module</th>
+                                                    <th>Staff Assigned</th>
+                                                    <th>Completion</th>
+                                                    <th>Due Date</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Publishing Workflow</strong></td>
+                                                    <td>12 staff</td>
+                                                    <td>85%</td>
+                                                    <td>Oct 25, 2025</td>
+                                                    <td><span class="badge badge-success">In Progress</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Quality Control</strong></td>
+                                                    <td>8 staff</td>
+                                                    <td>100%</td>
+                                                    <td>Oct 20, 2025</td>
+                                                    <td><span class="badge badge-success">Complete</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Digital Publishing</strong></td>
+                                                    <td>15 staff</td>
+                                                    <td>60%</td>
+                                                    <td>Nov 5, 2025</td>
+                                                    <td><span class="badge badge-warning">Behind</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Copyright Compliance</strong></td>
+                                                    <td>10 staff</td>
+                                                    <td>40%</td>
+                                                    <td>Nov 10, 2025</td>
+                                                    <td><span class="badge badge-info">Scheduled</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Training Actions</h4>
+                                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                        <button class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Schedule New Training</button>
+                                        <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem;">View Training Materials</button>
+                                        <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem;">Generate Reports</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Confirm Delivery Slot -->
+                <div class="content-card">
+                    <h2>📅 Confirm Delivery Slot</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(245, 158, 11, 0.05); border-left: 4px solid #f59e0b; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #f59e0b;">🚛 Delivery Slot Management</h3>
+                            <div style="display: grid; gap: 1rem;">
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Available Delivery Slots</h4>
+                                    <div class="table-wrapper">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Time Slot</th>
+                                                    <th>Capacity</th>
+                                                    <th>Booked</th>
+                                                    <th>Available</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Oct 20, 2025</strong></td>
+                                                    <td>9:00 AM - 12:00 PM</td>
+                                                    <td>5,000 units</td>
+                                                    <td>3,200 units</td>
+                                                    <td>1,800 units</td>
+                                                    <td><button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Book Slot</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Oct 20, 2025</strong></td>
+                                                    <td>1:00 PM - 4:00 PM</td>
+                                                    <td>5,000 units</td>
+                                                    <td>2,100 units</td>
+                                                    <td>2,900 units</td>
+                                                    <td><button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Book Slot</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Oct 21, 2025</strong></td>
+                                                    <td>9:00 AM - 12:00 PM</td>
+                                                    <td>5,000 units</td>
+                                                    <td>1,500 units</td>
+                                                    <td>3,500 units</td>
+                                                    <td><button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Book Slot</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Oct 21, 2025</strong></td>
+                                                    <td>1:00 PM - 4:00 PM</td>
+                                                    <td>5,000 units</td>
+                                                    <td>4,800 units</td>
+                                                    <td>200 units</td>
+                                                    <td><button class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;" disabled>Full</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Pending Confirmations</h4>
+                                    <div style="display: grid; gap: 0.75rem;">
+                                        <div style="padding: 0.75rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                                <div>
+                                                    <strong>Coastal Memories - 2,500 units</strong>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280;">Requested: Oct 22, 2025 - 9:00 AM slot</p>
+                                                </div>
+                                                <div style="display: flex; gap: 0.5rem;">
+                                                    <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Confirm</button>
+                                                    <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Reschedule</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="padding: 0.75rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                                <div>
+                                                    <strong>The Last Symphony - 1,800 units</strong>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280;">Requested: Oct 23, 2025 - 1:00 PM slot</p>
+                                                </div>
+                                                <div style="display: flex; gap: 0.5rem;">
+                                                    <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Confirm</button>
+                                                    <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Reschedule</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -231,6 +355,135 @@
                     <div style="margin-top: 1.5rem;">
                         <button class="btn btn-primary">Review Submissions</button>
                         <button class="btn btn-secondary" style="margin-left: 1rem;">Submission Guidelines</button>
+                    </div>
+                </div>
+
+                <!-- Reconcile Delivery (Extend) -->
+                <div class="content-card">
+                    <h2>✅ Reconcile Delivery</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(34, 197, 94, 0.05); border-left: 4px solid #22c55e; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #22c55e;">🔍 Delivery Reconciliation</h3>
+                            <div style="display: grid; gap: 1rem;">
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Pending Reconciliation</h4>
+                                    <div class="table-wrapper">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Delivery ID</th>
+                                                    <th>Expected Units</th>
+                                                    <th>Received Units</th>
+                                                    <th>Variance</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>DEL-2025-892</strong></td>
+                                                    <td>2,500</td>
+                                                    <td>2,487</td>
+                                                    <td>-13</td>
+                                                    <td><span class="badge badge-warning">Minor Variance</span></td>
+                                                    <td><button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Reconcile</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>DEL-2025-893</strong></td>
+                                                    <td>1,800</td>
+                                                    <td>1,800</td>
+                                                    <td>0</td>
+                                                    <td><span class="badge badge-success">Perfect Match</span></td>
+                                                    <td><button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Reconcile</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>DEL-2025-894</strong></td>
+                                                    <td>3,200</td>
+                                                    <td>3,150</td>
+                                                    <td>-50</td>
+                                                    <td><span class="badge badge-danger">Significant Variance</span></td>
+                                                    <td><button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Investigate</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Reconciliation Actions</h4>
+                                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                        <button class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Bulk Reconcile</button>
+                                        <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem;">Generate Variance Report</button>
+                                        <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem;">Export Reconciliation</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adjust Preorder Threshold (Extend) -->
+                <div class="content-card">
+                    <h2>⚙️ Adjust Preorder Threshold</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(168, 85, 247, 0.05); border-left: 4px solid #a855f7; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #a855f7;">🎛️ Preorder Threshold Management</h3>
+                            <div style="display: grid; gap: 1rem;">
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Current Preorder Thresholds</h4>
+                                    <div class="table-wrapper">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Book Title</th>
+                                                    <th>Current Threshold</th>
+                                                    <th>Preorders</th>
+                                                    <th>Recommended</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Coastal Memories</strong></td>
+                                                    <td>500 units</td>
+                                                    <td>1,247</td>
+                                                    <td>750 units</td>
+                                                    <td><button class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Adjust</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>The Last Symphony</strong></td>
+                                                    <td>300 units</td>
+                                                    <td>892</td>
+                                                    <td>500 units</td>
+                                                    <td><button class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Adjust</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Digital Horizons</strong></td>
+                                                    <td>200 units</td>
+                                                    <td>156</td>
+                                                    <td>200 units</td>
+                                                    <td><button class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Maintain</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Moonlight Tales</strong></td>
+                                                    <td>400 units</td>
+                                                    <td>623</td>
+                                                    <td>600 units</td>
+                                                    <td><button class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Adjust</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Threshold Management Tools</h4>
+                                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                        <button class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Apply AI Recommendations</button>
+                                        <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem;">Reset to Defaults</button>
+                                        <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem;">Export Settings</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

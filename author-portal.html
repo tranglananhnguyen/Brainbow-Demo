@@ -21,9 +21,11 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="author-portal.html" class="active">Dashboard</a></li>
-                <li><a href="#events">My Events</a></li>
-                <li><a href="#sales">Sales</a></li>
                 <li><a href="#books">My Books</a></li>
+                <li><a href="#royalties">Royalties</a></li>
+                <li><a href="#releases">Releases</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#events">Events</a></li>
                 <li><a href="index.html" class="btn-login">Logout</a></li>
             </ul>
             <div class="hamburger">
@@ -73,45 +75,219 @@
                     </div>
                 </div>
 
-                <!-- My Books -->
+                <!-- Author List and Sales Summary -->
                 <div class="content-card">
-                    <h2>📚 My Published Books</h2>
-                    <div style="display: grid; gap: 1.5rem;">
-                        <div style="display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; padding: 1.5rem; background: #f9fafb; border-radius: 0.75rem; border: 1px solid #e5e7eb;">
-                            <div style="width: 80px; height: 120px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
-                                📖
-                            </div>
-                            <div>
-                                <h3 style="margin: 0 0 0.5rem 0; font-size: 1.25rem;">Mysteries of the Past</h3>
-                                <p style="margin: 0 0 0.5rem 0; color: #6b7280;">Fiction • Published: March 2024</p>
-                                <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">A thrilling journey through historical mysteries and ancient secrets.</p>
-                                <div style="margin-top: 1rem; display: flex; gap: 1rem;">
-                                    <span class="badge badge-success">In Stock</span>
-                                    <span style="color: #6b7280; font-size: 0.875rem;">Total Sold: 4,523 units</span>
+                    <h2>📚 Author List and Sales Summary</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(99, 102, 241, 0.05); border-left: 4px solid #6366f1; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #6366f1;">📖 My Published Books</h3>
+                            <div style="display: grid; gap: 1.5rem;">
+                                <div style="display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; padding: 1.5rem; background: white; border-radius: 0.75rem; border: 1px solid #e5e7eb;">
+                                    <div style="width: 80px; height: 120px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                                        📖
+                                    </div>
+                                    <div>
+                                        <h4 style="margin: 0 0 0.5rem 0; font-size: 1.25rem;">Mysteries of the Past</h4>
+                                        <p style="margin: 0 0 0.5rem 0; color: #6b7280;">Fiction • Published: March 2024</p>
+                                        <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">A thrilling journey through historical mysteries and ancient secrets.</p>
+                                        <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                                            <span class="badge badge-success">In Stock</span>
+                                            <span style="color: #6b7280; font-size: 0.875rem;">Total Sold: 4,523 units</span>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div style="font-size: 1.5rem; font-weight: 700; color: #6366f1;">$24.99</div>
+                                        <button class="btn btn-secondary" style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div style="text-align: right;">
-                                <div style="font-size: 1.5rem; font-weight: 700; color: #6366f1;">$24.99</div>
-                                <button class="btn btn-secondary" style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                                
+                                <div style="display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; padding: 1.5rem; background: white; border-radius: 0.75rem; border: 1px solid #e5e7eb;">
+                                    <div style="width: 80px; height: 120px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                                        📖
+                                    </div>
+                                    <div>
+                                        <h4 style="margin: 0 0 0.5rem 0; font-size: 1.25rem;">Echoes of Tomorrow</h4>
+                                        <p style="margin: 0 0 0.5rem 0; color: #6b7280;">Science Fiction • Published: September 2023</p>
+                                        <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">A futuristic tale of humanity's greatest challenges and triumphs.</p>
+                                        <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                                            <span class="badge badge-warning">Low Stock</span>
+                                            <span style="color: #6b7280; font-size: 0.875rem;">Total Sold: 6,892 units</span>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div style="font-size: 1.5rem; font-weight: 700; color: #6366f1;">$22.99</div>
+                                        <button class="btn btn-secondary" style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div style="display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; padding: 1.5rem; background: #f9fafb; border-radius: 0.75rem; border: 1px solid #e5e7eb;">
-                            <div style="width: 80px; height: 120px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
-                                📖
-                            </div>
-                            <div>
-                                <h3 style="margin: 0 0 0.5rem 0; font-size: 1.25rem;">Echoes of Tomorrow</h3>
-                                <p style="margin: 0 0 0.5rem 0; color: #6b7280;">Science Fiction • Published: September 2023</p>
-                                <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">A futuristic tale of humanity's greatest challenges and triumphs.</p>
-                                <div style="margin-top: 1rem; display: flex; gap: 1rem;">
-                                    <span class="badge badge-warning">Low Stock</span>
-                                    <span style="color: #6b7280; font-size: 0.875rem;">Total Sold: 6,892 units</span>
+                    </div>
+                </div>
+
+                <!-- Automated Royalty Calculation View -->
+                <div class="content-card">
+                    <h2>💰 Automated Royalty Calculation View</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10b981; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #10b981;">💵 Royalty Overview</h3>
+                            <div style="display: grid; gap: 1rem;">
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Current Royalty Status</h4>
+                                    <div class="table-wrapper">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Book Title</th>
+                                                    <th>Units Sold</th>
+                                                    <th>Royalty Rate</th>
+                                                    <th>Gross Royalty</th>
+                                                    <th>Net Royalty</th>
+                                                    <th>Payment Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Mysteries of the Past</strong></td>
+                                                    <td>4,523</td>
+                                                    <td>12%</td>
+                                                    <td>$13,570</td>
+                                                    <td>$12,213</td>
+                                                    <td><span class="badge badge-success">Paid</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Echoes of Tomorrow</strong></td>
+                                                    <td>6,892</td>
+                                                    <td>10%</td>
+                                                    <td>$15,843</td>
+                                                    <td>$14,259</td>
+                                                    <td><span class="badge badge-success">Paid</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Total</strong></td>
+                                                    <td>11,415</td>
+                                                    <td>-</td>
+                                                    <td>$29,413</td>
+                                                    <td>$26,472</td>
+                                                    <td><span class="badge badge-info">Current</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Upcoming Royalty Payments</h4>
+                                    <div style="display: grid; gap: 0.75rem;">
+                                        <div style="padding: 0.75rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                                <div>
+                                                    <strong>Q4 2025 Royalty Payment</strong>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">Estimated amount: $8,742</p>
+                                                </div>
+                                                <span style="color: #6b7280; font-size: 0.75rem;">Due: Nov 30, 2025</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div style="padding: 0.75rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                                <div>
+                                                    <strong>Q1 2026 Royalty Payment</strong>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">Estimated amount: $9,150</p>
+                                                </div>
+                                                <span style="color: #6b7280; font-size: 0.75rem;">Due: Feb 28, 2026</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div style="text-align: right;">
-                                <div style="font-size: 1.5rem; font-weight: 700; color: #6366f1;">$22.99</div>
-                                <button class="btn btn-secondary" style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Release Calendar -->
+                <div class="content-card">
+                    <h2>📅 Upcoming Release Calendar</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(245, 158, 11, 0.05); border-left: 4px solid #f59e0b; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #f59e0b;">🗓️ Release Schedule</h3>
+                            <div style="display: grid; gap: 1rem;">
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Scheduled Releases</h4>
+                                    <div class="table-wrapper">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Book Title</th>
+                                                    <th>Release Date</th>
+                                                    <th>Status</th>
+                                                    <th>Pre-orders</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Shadows of Yesterday</strong></td>
+                                                    <td>Dec 15, 2025</td>
+                                                    <td><span class="badge badge-success">Ready</span></td>
+                                                    <td>1,247</td>
+                                                    <td><button class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">View Details</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Digital Dreams</strong></td>
+                                                    <td>Mar 20, 2026</td>
+                                                    <td><span class="badge badge-info">In Production</span></td>
+                                                    <td>892</td>
+                                                    <td><button class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">View Details</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Future Chronicles</strong></td>
+                                                    <td>Jun 10, 2026</td>
+                                                    <td><span class="badge badge-warning">In Editing</span></td>
+                                                    <td>456</td>
+                                                    <td><button class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">View Details</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Calendar View</h4>
+                                    <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.5rem; text-align: center;">
+                                        <div style="padding: 0.5rem; background: #f9fafb; border-radius: 0.25rem; font-weight: 600;">Mon</div>
+                                        <div style="padding: 0.5rem; background: #f9fafb; border-radius: 0.25rem; font-weight: 600;">Tue</div>
+                                        <div style="padding: 0.5rem; background: #f9fafb; border-radius: 0.25rem; font-weight: 600;">Wed</div>
+                                        <div style="padding: 0.5rem; background: #f9fafb; border-radius: 0.25rem; font-weight: 600;">Thu</div>
+                                        <div style="padding: 0.5rem; background: #f9fafb; border-radius: 0.25rem; font-weight: 600;">Fri</div>
+                                        <div style="padding: 0.5rem; background: #f9fafb; border-radius: 0.25rem; font-weight: 600;">Sat</div>
+                                        <div style="padding: 0.5rem; background: #f9fafb; border-radius: 0.25rem; font-weight: 600;">Sun</div>
+                                        
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">1</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">2</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">3</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">4</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">5</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">6</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">7</div>
+                                        
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">8</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">9</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">10</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">11</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">12</div>
+                                        <div style="padding: 0.5rem; background: rgba(16, 185, 129, 0.1); border-radius: 0.25rem; border: 2px solid #10b981; font-weight: 600;">13</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">14</div>
+                                        
+                                        <div style="padding: 0.5rem; background: rgba(16, 185, 129, 0.1); border-radius: 0.25rem; border: 2px solid #10b981; font-weight: 600;">15</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">16</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">17</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">18</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">19</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">20</div>
+                                        <div style="padding: 0.5rem; background: white; border-radius: 0.25rem;">21</div>
+                                    </div>
+                                    <p style="margin: 1rem 0 0 0; color: #6b7280; font-size: 0.875rem; text-align: center;">📅 Dec 15: "Shadows of Yesterday" Release</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -202,6 +378,153 @@
                                 <button class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Accept</button>
                                 <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Decline</button>
                                 <button class="btn btn-secondary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Propose Changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Author Feedback (Extend) -->
+                <div class="content-card">
+                    <h2>💬 Author Feedback</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(168, 85, 247, 0.05); border-left: 4px solid #a855f7; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #a855f7;">📝 Feedback Management</h3>
+                            <div style="display: grid; gap: 1rem;">
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Reader Reviews & Feedback</h4>
+                                    <div style="display: grid; gap: 0.75rem;">
+                                        <div style="padding: 1rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                                <div>
+                                                    <strong>Mysteries of the Past - 4.8/5 ⭐</strong>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">"Absolutely captivating! The historical details are incredible." - Sarah M.</p>
+                                                </div>
+                                                <span style="color: #6b7280; font-size: 0.75rem;">2 days ago</span>
+                                            </div>
+                                            <div style="display: flex; gap: 0.5rem;">
+                                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View All Reviews</button>
+                                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Respond</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div style="padding: 1rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                                <div>
+                                                    <strong>Echoes of Tomorrow - 4.6/5 ⭐</strong>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">"Mind-blowing sci-fi concepts with great character development." - Mike R.</p>
+                                                </div>
+                                                <span style="color: #6b7280; font-size: 0.75rem;">1 week ago</span>
+                                            </div>
+                                            <div style="display: flex; gap: 0.5rem;">
+                                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View All Reviews</button>
+                                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Respond</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Submit Feedback to Publisher</h4>
+                                    <div style="display: grid; gap: 1rem;">
+                                        <div>
+                                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Feedback Type</label>
+                                            <select style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem;">
+                                                <option>Select feedback type...</option>
+                                                <option>Marketing Suggestions</option>
+                                                <option>Cover Design Feedback</option>
+                                                <option>Pricing Concerns</option>
+                                                <option>Distribution Issues</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Subject</label>
+                                            <input type="text" placeholder="Enter feedback subject..." style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem;">
+                                        </div>
+                                        <div>
+                                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Feedback</label>
+                                            <textarea placeholder="Share your feedback, suggestions, or concerns..." rows="4" style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; resize: vertical;"></textarea>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Submit Feedback</button>
+                                            <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem; margin-left: 1rem;">Save Draft</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Suggestion (Extend) -->
+                <div class="content-card">
+                    <h2>🎪 Event Suggestion</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(34, 197, 94, 0.05); border-left: 4px solid #22c55e; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #22c55e;">🎯 Event Proposals</h3>
+                            <div style="display: grid; gap: 1rem;">
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Suggested Events</h4>
+                                    <div style="display: grid; gap: 0.75rem;">
+                                        <div style="padding: 1rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                                <div>
+                                                    <strong>Virtual Book Club Discussion</strong>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">Monthly online discussion about "Mysteries of the Past" with readers</p>
+                                                </div>
+                                                <span class="badge badge-info">Under Review</span>
+                                            </div>
+                                            <div style="display: flex; gap: 0.5rem;">
+                                                <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Edit Proposal</button>
+                                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div style="padding: 1rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                                <div>
+                                                    <strong>Writing Workshop Series</strong>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">4-week workshop on historical fiction writing techniques</p>
+                                                </div>
+                                                <span class="badge badge-success">Approved</span>
+                                            </div>
+                                            <div style="display: flex; gap: 0.5rem;">
+                                                <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Schedule Event</button>
+                                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Suggest New Event</h4>
+                                    <div style="display: grid; gap: 1rem;">
+                                        <div>
+                                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Event Type</label>
+                                            <select style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem;">
+                                                <option>Select event type...</option>
+                                                <option>Book Signing</option>
+                                                <option>Author Talk & Q&A</option>
+                                                <option>Writing Workshop</option>
+                                                <option>Virtual Reading</option>
+                                                <option>Book Club Discussion</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Event Title</label>
+                                            <input type="text" placeholder="Enter event title..." style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem;">
+                                        </div>
+                                        <div>
+                                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Description</label>
+                                            <textarea placeholder="Describe your event idea, target audience, and any special requirements..." rows="4" style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; resize: vertical;"></textarea>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Submit Suggestion</button>
+                                            <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem; margin-left: 1rem;">Save Draft</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -27,6 +27,7 @@
                         <label for="role">Select Your Role</label>
                         <select id="role" name="role" required>
                             <option value="">Choose your role...</option>
+                            <option value="customer">Customer (Browse, Order, Events)</option>
                             <option value="executive">Executive User (CEO, COO, CFO, CIO)</option>
                             <option value="franchise">Franchise Manager</option>
                             <option value="store">Store Staff</option>
@@ -80,6 +81,7 @@
             
             // Route to appropriate portal based on role
             const roleRoutes = {
+                'customer': 'customer-portal.html',
                 'executive': 'executive-dashboard.html',
                 'franchise': 'franchise-portal.html',
                 'store': 'store-portal.html',

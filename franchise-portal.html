@@ -21,9 +21,11 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="franchise-portal.html" class="active">Dashboard</a></li>
+                <li><a href="#sales-update">Sales Update</a></li>
                 <li><a href="#inventory">Inventory</a></li>
                 <li><a href="#events">Events</a></li>
-                <li><a href="#orders">Orders</a></li>
+                <li><a href="#training">Training</a></li>
+                <li><a href="#messages">Messages</a></li>
                 <li><a href="index.html" class="btn-login">Logout</a></li>
             </ul>
             <div class="hamburger">
@@ -73,58 +75,104 @@
                     </div>
                 </div>
 
-                <!-- Current Inventory Status -->
+                <!-- Daily Sales Update -->
                 <div class="content-card">
-                    <h2>📦 Inventory Status</h2>
-                    <div class="table-wrapper">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Category</th>
-                                    <th>In Stock</th>
-                                    <th>Low Stock</th>
-                                    <th>Out of Stock</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Fiction</strong></td>
-                                    <td>1,245</td>
-                                    <td>12</td>
-                                    <td>3</td>
-                                    <td><span class="badge badge-success">Good</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Non-Fiction</strong></td>
-                                    <td>892</td>
-                                    <td>8</td>
-                                    <td>1</td>
-                                    <td><span class="badge badge-success">Good</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Children's Books</strong></td>
-                                    <td>645</td>
-                                    <td>18</td>
-                                    <td>5</td>
-                                    <td><span class="badge badge-warning">Review Needed</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Educational</strong></td>
-                                    <td>420</td>
-                                    <td>6</td>
-                                    <td>2</td>
-                                    <td><span class="badge badge-success">Good</span></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Specialty</strong></td>
-                                    <td>280</td>
-                                    <td>3</td>
-                                    <td>0</td>
-                                    <td><span class="badge badge-success">Excellent</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <h2>📊 Daily Sales Update</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(99, 102, 241, 0.05); border-left: 4px solid #6366f1; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #6366f1;">💰 Today's Sales Summary</h3>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 0.5rem 0;">Total Revenue</h4>
+                                    <div style="font-size: 1.5rem; font-weight: 700; color: #6366f1;">$4,235</div>
+                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">↑ 8% vs yesterday</p>
+                                </div>
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 0.5rem 0;">Units Sold</h4>
+                                    <div style="font-size: 1.5rem; font-weight: 700; color: #6366f1;">127</div>
+                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">↑ 12% vs yesterday</p>
+                                </div>
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 0.5rem 0;">Avg. Transaction</h4>
+                                    <div style="font-size: 1.5rem; font-weight: 700; color: #6366f1;">$33.35</div>
+                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">↑ 3% vs yesterday</p>
+                                </div>
+                            </div>
+                            <div style="margin-top: 1.5rem;">
+                                <button class="btn btn-primary">Update Sales Data</button>
+                                <button class="btn btn-secondary" style="margin-left: 1rem;">View Detailed Report</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inventory Stock Level -->
+                <div class="content-card">
+                    <h2>📦 Inventory Stock Level</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10b981; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #10b981;">📋 Current Stock Levels</h3>
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Category</th>
+                                            <th>In Stock</th>
+                                            <th>Low Stock</th>
+                                            <th>Out of Stock</th>
+                                            <th>Reorder Point</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Fiction</strong></td>
+                                            <td>1,245</td>
+                                            <td>12</td>
+                                            <td>3</td>
+                                            <td>50</td>
+                                            <td><span class="badge badge-success">Good</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Non-Fiction</strong></td>
+                                            <td>892</td>
+                                            <td>8</td>
+                                            <td>1</td>
+                                            <td>40</td>
+                                            <td><span class="badge badge-success">Good</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Children's Books</strong></td>
+                                            <td>645</td>
+                                            <td>18</td>
+                                            <td>5</td>
+                                            <td>75</td>
+                                            <td><span class="badge badge-warning">Review Needed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Educational</strong></td>
+                                            <td>420</td>
+                                            <td>6</td>
+                                            <td>2</td>
+                                            <td>60</td>
+                                            <td><span class="badge badge-success">Good</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Specialty</strong></td>
+                                            <td>280</td>
+                                            <td>3</td>
+                                            <td>0</td>
+                                            <td>25</td>
+                                            <td><span class="badge badge-success">Excellent</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div style="margin-top: 1.5rem;">
+                                <button class="btn btn-primary">Update Stock Levels</button>
+                                <button class="btn btn-secondary" style="margin-left: 1rem;">Generate Reorder Report</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -177,40 +225,228 @@
                     </div>
                 </div>
 
-                <!-- Upcoming Events -->
+                <!-- Event Organize -->
                 <div class="content-card">
-                    <h2>✍️ Scheduled Author Events</h2>
+                    <h2>🎪 Event Organize</h2>
                     <div style="display: grid; gap: 1rem;">
-                        <div style="padding: 1.5rem; background: #f9fafb; border-radius: 0.75rem; border: 1px solid #e5e7eb;">
-                            <div style="display: flex; justify-content: space-between; align-items: start;">
-                                <div>
-                                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.25rem;">Sarah Johnson - Book Signing</h3>
-                                    <p style="margin: 0; color: #6b7280;">📅 October 25, 2025 at 2:00 PM</p>
-                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280;">📖 "Mysteries of the Past" - Fiction</p>
+                        <div style="padding: 1.5rem; background: rgba(245, 158, 11, 0.05); border-left: 4px solid #f59e0b; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #f59e0b;">📅 Event Management</h3>
+                            <div style="display: grid; gap: 1rem;">
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Upcoming Events</h4>
+                                    <div style="display: grid; gap: 1rem;">
+                                        <div style="padding: 1rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                                <div>
+                                                    <h5 style="margin: 0 0 0.5rem 0; font-size: 1.125rem;">Sarah Johnson - Book Signing</h5>
+                                                    <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">📅 October 25, 2025 at 2:00 PM</p>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">📖 "Mysteries of the Past" - Fiction</p>
+                                                </div>
+                                                <span class="badge badge-success">Confirmed</span>
+                                            </div>
+                                            <div style="display: flex; gap: 0.5rem;">
+                                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Edit Event</button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div style="padding: 1rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                                <div>
+                                                    <h5 style="margin: 0 0 0.5rem 0; font-size: 1.125rem;">Dr. Michael Chen - Q&A Session</h5>
+                                                    <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">📅 November 3, 2025 at 6:00 PM</p>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">📖 "Science for Everyone" - Educational</p>
+                                                </div>
+                                                <span class="badge badge-info">Pending Setup</span>
+                                            </div>
+                                            <div style="display: flex; gap: 0.5rem;">
+                                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Edit Event</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <span class="badge badge-success">Confirmed</span>
-                            </div>
-                            <div style="margin-top: 1rem;">
-                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                                
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Event Organization Tools</h4>
+                                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                        <button class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Create New Event</button>
+                                        <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem;">Event Templates</button>
+                                        <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem;">Venue Management</button>
+                                        <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem;">Event Calendar</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div style="padding: 1.5rem; background: #f9fafb; border-radius: 0.75rem; border: 1px solid #e5e7eb;">
-                            <div style="display: flex; justify-content: space-between; align-items: start;">
-                                <div>
-                                    <h3 style="margin: 0 0 0.5rem 0; font-size: 1.25rem;">Dr. Michael Chen - Q&A Session</h3>
-                                    <p style="margin: 0; color: #6b7280;">📅 November 3, 2025 at 6:00 PM</p>
-                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280;">📖 "Science for Everyone" - Educational</p>
+                    </div>
+                </div>
+
+                <!-- Training and Announcement section -->
+                <div class="content-card">
+                    <h2>🎓 Training and Announcement Section</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(168, 85, 247, 0.05); border-left: 4px solid #a855f7; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #a855f7;">📚 Training & Development</h3>
+                            <div style="display: grid; gap: 1rem;">
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Current Training Programs</h4>
+                                    <div class="table-wrapper">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Training Module</th>
+                                                    <th>Progress</th>
+                                                    <th>Due Date</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Customer Service Excellence</strong></td>
+                                                    <td>85%</td>
+                                                    <td>Oct 25, 2025</td>
+                                                    <td><span class="badge badge-success">In Progress</span></td>
+                                                    <td><button class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Continue</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Inventory Management</strong></td>
+                                                    <td>100%</td>
+                                                    <td>Oct 20, 2025</td>
+                                                    <td><span class="badge badge-success">Complete</span></td>
+                                                    <td><button class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Review</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Event Planning</strong></td>
+                                                    <td>60%</td>
+                                                    <td>Nov 5, 2025</td>
+                                                    <td><span class="badge badge-warning">Behind</span></td>
+                                                    <td><button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Resume</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Sales Techniques</strong></td>
+                                                    <td>0%</td>
+                                                    <td>Nov 10, 2025</td>
+                                                    <td><span class="badge badge-info">Not Started</span></td>
+                                                    <td><button class="btn btn-primary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Start</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                                <span class="badge badge-info">Pending Setup</span>
-                            </div>
-                            <div style="margin-top: 1rem;">
-                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View Details</button>
+                                
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Recent Announcements</h4>
+                                    <div style="display: grid; gap: 0.75rem;">
+                                        <div style="padding: 0.75rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                                <div>
+                                                    <strong>Q4 Performance Review Schedule</strong>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">Performance reviews will begin November 1st. Please prepare your self-assessment.</p>
+                                                </div>
+                                                <span style="color: #6b7280; font-size: 0.75rem;">Oct 15</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div style="padding: 0.75rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                                <div>
+                                                    <strong>New Holiday Hours Policy</strong>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">Updated store hours for the holiday season are now available in the policy section.</p>
+                                                </div>
+                                                <span style="color: #6b7280; font-size: 0.75rem;">Oct 12</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div style="padding: 0.75rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start;">
+                                                <div>
+                                                    <strong>Author Event Training Available</strong>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">New training module for author event coordination is now live.</p>
+                                                </div>
+                                                <span style="color: #6b7280; font-size: 0.75rem;">Oct 10</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div style="margin-top: 1rem;">
-                            <button class="btn btn-primary">Request New Event</button>
+                    </div>
+                </div>
+
+                <!-- Message Center (two-way chat with executives) - Extend -->
+                <div class="content-card">
+                    <h2>💬 Message Center (Two-way Chat with Executives)</h2>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="padding: 1.5rem; background: rgba(59, 130, 246, 0.05); border-left: 4px solid #3b82f6; border-radius: 0.75rem;">
+                            <h3 style="margin: 0 0 1rem 0; color: #3b82f6;">📨 Executive Communication</h3>
+                            <div style="display: grid; gap: 1rem;">
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Recent Messages</h4>
+                                    <div style="display: grid; gap: 0.75rem;">
+                                        <div style="padding: 1rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                                <div>
+                                                    <strong>From: CEO Sarah Williams</strong>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">Great job on the Q3 performance! Let's discuss the upcoming holiday strategy.</p>
+                                                </div>
+                                                <span style="color: #6b7280; font-size: 0.75rem;">2 hours ago</span>
+                                            </div>
+                                            <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Reply</button>
+                                        </div>
+                                        
+                                        <div style="padding: 1rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                                <div>
+                                                    <strong>From: COO Michael Torres</strong>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">Please review the new inventory management procedures and provide feedback.</p>
+                                                </div>
+                                                <span style="color: #6b7280; font-size: 0.75rem;">1 day ago</span>
+                                            </div>
+                                            <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Reply</button>
+                                        </div>
+                                        
+                                        <div style="padding: 1rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                                                <div>
+                                                    <strong>From: CFO Lisa Anderson</strong>
+                                                    <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.875rem;">Q4 budget approval is pending. Please submit your store budget by Friday.</p>
+                                                </div>
+                                                <span style="color: #6b7280; font-size: 0.75rem;">2 days ago</span>
+                                            </div>
+                                            <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Reply</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                                    <h4 style="margin: 0 0 1rem 0;">Send Message to Executive</h4>
+                                    <div style="display: grid; gap: 1rem;">
+                                        <div>
+                                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Recipient</label>
+                                            <select style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem;">
+                                                <option>Select Executive...</option>
+                                                <option>CEO Sarah Williams</option>
+                                                <option>COO Michael Torres</option>
+                                                <option>CFO Lisa Anderson</option>
+                                                <option>CIO David Brown</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Subject</label>
+                                            <input type="text" placeholder="Enter message subject..." style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem;">
+                                        </div>
+                                        <div>
+                                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
+                                            <textarea placeholder="Type your message here..." rows="4" style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; resize: vertical;"></textarea>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Send Message</button>
+                                            <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem; margin-left: 1rem;">Save Draft</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

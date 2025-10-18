@@ -102,8 +102,16 @@ body {
     color: var(--text-primary);
 }
 
-.rainbow-icon {
-    font-size: 1.75rem;
+.book-icon {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0 2px 4px rgba(139, 69, 19, 0.2));
+    transition: all 0.3s ease;
+}
+
+.book-icon:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(139, 69, 19, 0.3));
 }
 
 .brand-text {
@@ -170,7 +178,12 @@ body {
     position: relative;
     padding: 8rem 0 6rem;
     overflow: hidden;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 240, 0.95) 0%, rgba(250, 250, 245, 0.9) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="book" patternUnits="userSpaceOnUse" width="1200" height="800"><rect width="1200" height="800" fill="%23f5f5f0"/><g opacity="0.1"><path d="M50 100 L1150 100 L1150 700 L50 700 Z" fill="none" stroke="%238B7355" stroke-width="2"/><path d="M50 100 L50 700" stroke="%238B7355" stroke-width="1"/><path d="M1150 100 L1150 700" stroke="%238B7355" stroke-width="1"/><path d="M50 200 L1150 200" stroke="%238B7355" stroke-width="0.5" opacity="0.3"/><path d="M50 300 L1150 300" stroke="%238B7355" stroke-width="0.5" opacity="0.3"/><path d="M50 400 L1150 400" stroke="%238B7355" stroke-width="0.5" opacity="0.3"/><path d="M50 500 L1150 500" stroke="%238B7355" stroke-width="0.5" opacity="0.3"/><path d="M50 600 L1150 600" stroke="%238B7355" stroke-width="0.5" opacity="0.3"/></g></pattern></defs><rect width="1200" height="800" fill="url(%23book)"/></svg>');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .hero-background {
@@ -180,9 +193,25 @@ body {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 15% 20%, rgba(139, 115, 85, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 85% 30%, rgba(139, 115, 85, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(139, 115, 85, 0.06) 0%, transparent 45%),
+        radial-gradient(circle at 80% 70%, rgba(139, 115, 85, 0.04) 0%, transparent 60%);
     z-index: 1;
+}
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><g opacity="0.2"><!-- Left side botanical branch --><path d="M50 200 Q150 150 250 200 Q350 180 450 200" stroke="%236B8E23" stroke-width="3" fill="none"/><circle cx="80" cy="190" r="4" fill="%236B8E23"/><circle cx="120" cy="185" r="3" fill="%236B8E23"/><circle cx="160" cy="180" r="2.5" fill="%236B8E23"/><circle cx="200" cy="185" r="3.5" fill="%236B8E23"/><circle cx="240" cy="190" r="2" fill="%236B8E23"/><circle cx="280" cy="195" r="3" fill="%236B8E23"/><circle cx="320" cy="190" r="2.5" fill="%236B8E23"/><circle cx="360" cy="185" r="4" fill="%236B8E23"/><circle cx="400" cy="190" r="3" fill="%236B8E23"/><circle cx="440" cy="195" r="2" fill="%236B8E23"/><!-- Right side flower --><circle cx="950" cy="180" r="25" fill="%23E6E6FA" stroke="%236B8E23" stroke-width="2"/><circle cx="950" cy="180" r="15" fill="%23F0E68C"/><circle cx="950" cy="180" r="8" fill="%23FFB6C1"/><path d="M950 200 Q960 220 950 240 Q940 220 950 200" stroke="%236B8E23" stroke-width="2" fill="%2398FB98"/><path d="M950 200 Q960 220 950 240 Q940 220 950 200" stroke="%236B8E23" stroke-width="2" fill="%2398FB98"/><!-- Bottom left foliage --><path d="M100 650 Q200 600 300 650 Q400 620 500 650" stroke="%236B8E23" stroke-width="2.5" fill="none"/><circle cx="130" cy="640" r="3" fill="%236B8E23"/><circle cx="170" cy="635" r="2.5" fill="%236B8E23"/><circle cx="210" cy="640" r="3.5" fill="%236B8E23"/><circle cx="250" cy="645" r="2" fill="%236B8E23"/><circle cx="290" cy="640" r="3" fill="%236B8E23"/><circle cx="330" cy="635" r="2.5" fill="%236B8E23"/><circle cx="370" cy="640" r="4" fill="%236B8E23"/><circle cx="410" cy="645" r="3" fill="%236B8E23"/><circle cx="450" cy="640" r="2" fill="%236B8E23"/><circle cx="490" cy="645" r="3.5" fill="%236B8E23"/><!-- Bottom right woven basket/roots --><path d="M800 700 Q900 680 1000 700 Q1100 720 1200 700" stroke="%238B4513" stroke-width="4" fill="none"/><path d="M820 710 Q840 700 860 710 Q880 720 900 710" stroke="%238B4513" stroke-width="2" fill="none"/><path d="M920 710 Q940 700 960 710 Q980 720 1000 710" stroke="%238B4513" stroke-width="2" fill="none"/><path d="M1020 710 Q1040 700 1060 710 Q1080 720 1100 710" stroke="%238B4513" stroke-width="2" fill="none"/></g></svg>');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
 }
 
 .hero .container {
@@ -194,29 +223,50 @@ body {
     max-width: 800px;
     text-align: center;
     margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+.hero-content::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    z-index: -1;
 }
 
 .hero-title {
     font-family: var(--font-heading);
     font-size: 3.5rem;
     font-weight: 700;
-    color: white;
+    color: #8B4513;
     margin-bottom: var(--spacing-md);
     line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: -0.02em;
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, #fbbf24, #f59e0b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #A0522D;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    font-weight: 800;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #2F4F4F;
     margin-bottom: var(--spacing-xl);
     line-height: 1.8;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-buttons {
@@ -224,6 +274,9 @@ body {
     gap: var(--spacing-md);
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 4;
 }
 
 .btn {
@@ -238,23 +291,30 @@ body {
 
 .btn-primary {
     background: white;
-    color: var(--primary-color);
+    color: #8B4513;
+    border: 2px solid #8B4513;
+    box-shadow: 0 4px 8px rgba(139, 69, 19, 0.2);
 }
 
 .btn-primary:hover {
+    background: #8B4513;
+    color: white;
     transform: translateY(-3px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 6px 12px rgba(139, 69, 19, 0.3);
 }
 
 .btn-secondary {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
+    background: white;
+    color: #2F4F4F;
+    border: 2px solid #4682B4;
+    box-shadow: 0 4px 8px rgba(70, 130, 180, 0.2);
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: var(--primary-color);
+    background: #4682B4;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(70, 130, 180, 0.3);
 }
 
 /* ===================================
@@ -712,20 +772,64 @@ tr:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: 
+        linear-gradient(135deg, rgba(245, 245, 240, 0.95) 0%, rgba(250, 250, 245, 0.9) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="book" patternUnits="userSpaceOnUse" width="1200" height="800"><rect width="1200" height="800" fill="%23f5f5f0"/><g opacity="0.08"><path d="M50 100 L1150 100 L1150 700 L50 700 Z" fill="none" stroke="%238B7355" stroke-width="2"/><path d="M50 100 L50 700" stroke="%238B7355" stroke-width="1"/><path d="M1150 100 L1150 700" stroke="%238B7355" stroke-width="1"/><path d="M50 200 L1150 200" stroke="%238B7355" stroke-width="0.5" opacity="0.3"/><path d="M50 300 L1150 300" stroke="%238B7355" stroke-width="0.5" opacity="0.3"/><path d="M50 400 L1150 400" stroke="%238B7355" stroke-width="0.5" opacity="0.3"/><path d="M50 500 L1150 500" stroke="%238B7355" stroke-width="0.5" opacity="0.3"/><path d="M50 600 L1150 600" stroke="%238B7355" stroke-width="0.5" opacity="0.3"/></g></pattern></defs><rect width="1200" height="800" fill="url(%23book)"/></svg>');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     padding: var(--spacing-lg);
+    position: relative;
+}
+
+.login-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(139, 115, 85, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(139, 115, 85, 0.05) 0%, transparent 60%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><g opacity="0.1"><path d="M100 200 Q200 150 300 200 Q400 180 500 200" stroke="%236B8E23" stroke-width="2" fill="none"/><circle cx="120" cy="190" r="3" fill="%236B8E23"/><circle cx="180" cy="185" r="2" fill="%236B8E23"/><circle cx="240" cy="190" r="2.5" fill="%236B8E23"/><circle cx="300" cy="195" r="2" fill="%236B8E23"/><circle cx="360" cy="190" r="3" fill="%236B8E23"/><circle cx="420" cy="185" r="2.5" fill="%236B8E23"/><circle cx="480" cy="190" r="2" fill="%236B8E23"/><path d="M800 300 Q900 250 1000 300 Q1100 280 1200 300" stroke="%236B8E23" stroke-width="1.5" fill="none"/><circle cx="820" cy="290" r="2" fill="%236B8E23"/><circle cx="880" cy="285" r="1.5" fill="%236B8E23"/><circle cx="940" cy="290" r="2" fill="%236B8E23"/><circle cx="1000" cy="295" r="1.5" fill="%236B8E23"/><circle cx="1060" cy="290" r="2.5" fill="%236B8E23"/><circle cx="1120" cy="285" r="2" fill="%236B8E23"/><path d="M200 600 Q300 550 400 600 Q500 580 600 600" stroke="%236B8E23" stroke-width="2" fill="none"/><circle cx="220" cy="590" r="2.5" fill="%236B8E23"/><circle cx="280" cy="585" r="2" fill="%236B8E23"/><circle cx="340" cy="590" r="3" fill="%236B8E23"/><circle cx="400" cy="595" r="2" fill="%236B8E23"/><circle cx="460" cy="590" r="2.5" fill="%236B8E23"/><circle cx="520" cy="585" r="2" fill="%236B8E23"/><circle cx="580" cy="590" r="3" fill="%236B8E23"/></g></svg>');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
 }
 
 .login-container {
     max-width: 450px;
     width: 100%;
+    position: relative;
+    z-index: 2;
 }
 
 .login-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     padding: var(--spacing-xl);
     border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 
+        0 20px 40px rgba(139, 69, 19, 0.1),
+        0 10px 20px rgba(139, 69, 19, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 115, 85, 0.2);
+    position: relative;
+}
+
+.login-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(139, 115, 85, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(139, 115, 85, 0.03) 0%, transparent 50%);
+    border-radius: var(--radius-xl);
+    z-index: -1;
 }
 
 .login-header {
@@ -744,13 +848,17 @@ tr:hover {
 }
 
 .login-header h2 {
+    font-family: var(--font-heading);
     font-size: 1.75rem;
-    color: var(--text-primary);
+    color: #8B4513;
     margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
 }
 
 .login-header p {
-    color: var(--text-secondary);
+    color: #2F4F4F;
+    font-weight: 500;
 }
 
 .form-group {
@@ -760,62 +868,71 @@ tr:hover {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--text-primary);
-    font-weight: 500;
+    color: #8B4513;
+    font-weight: 600;
+    font-size: 0.95rem;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--border-color);
+    padding: 0.875rem 1rem;
+    border: 2px solid rgba(139, 115, 85, 0.2);
     border-radius: var(--radius-md);
     font-size: 1rem;
     font-family: var(--font-body);
     transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2F4F4F;
+    font-weight: 500;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    border-color: #8B4513;
+    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+    background: white;
 }
 
 .btn-full {
     width: 100%;
     padding: 0.875rem;
-    background: var(--primary-color);
+    background: #8B4513;
     color: white;
-    border: none;
+    border: 2px solid #8B4513;
     border-radius: var(--radius-md);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(139, 69, 19, 0.2);
 }
 
 .btn-full:hover {
-    background: var(--primary-dark);
+    background: #A0522D;
+    border-color: #A0522D;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 6px 12px rgba(139, 69, 19, 0.3);
 }
 
 .login-footer {
     text-align: center;
     margin-top: var(--spacing-md);
-    color: var(--text-secondary);
+    color: #2F4F4F;
 }
 
 .login-footer a {
-    color: var(--primary-color);
+    color: #8B4513;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .login-footer a:hover {
+    color: #A0522D;
     text-decoration: underline;
 }
 
@@ -824,14 +941,14 @@ tr:hover {
     align-items: center;
     text-align: center;
     margin: var(--spacing-md) 0;
-    color: var(--text-light);
+    color: #8B7355;
 }
 
 .divider::before,
 .divider::after {
     content: '';
     flex: 1;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(139, 115, 85, 0.3);
 }
 
 .divider span {

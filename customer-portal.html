@@ -69,7 +69,7 @@
                     <span class="dashboard-icon">👤</span>
                     <div>
                         <h1>Customer Experience Portal</h1>
-                        <p style="color: #6b7280; margin: 0;">Welcome! Discover your next great read</p>
+                        <p id="welcomeMessage" style="color: #6b7280; margin: 0;">Welcome! Discover your next great read</p>
                     </div>
                 </div>
             </div>
@@ -81,23 +81,23 @@
                 <div class="dashboard-grid">
                     <div class="stat-card">
                         <h3>Books Purchased</h3>
-                        <div class="stat-value">0</div>
-                        <p style="color: #6b7280; margin-top: 0.5rem;">Start shopping to see your purchases</p>
+                        <div class="stat-value" id="booksPurchased">0</div>
+                        <p id="booksPurchasedText" style="color: #6b7280; margin-top: 0.5rem;">Start shopping to see your purchases</p>
                     </div>
                     <div class="stat-card success">
                         <h3>Events Attended</h3>
-                        <div class="stat-value">0</div>
-                        <p style="color: #6b7280; margin-top: 0.5rem;">Register for events below</p>
+                        <div class="stat-value" id="eventsAttended">0</div>
+                        <p id="eventsAttendedText" style="color: #6b7280; margin-top: 0.5rem;">Register for events below</p>
                     </div>
                     <div class="stat-card">
                         <h3>Wishlist Items</h3>
-                        <div class="stat-value">0</div>
-                        <p style="color: #6b7280; margin-top: 0.5rem;">Add books to your wishlist</p>
+                        <div class="stat-value" id="wishlistItems">0</div>
+                        <p id="wishlistItemsText" style="color: #6b7280; margin-top: 0.5rem;">Add books to your wishlist</p>
                     </div>
                     <div class="stat-card warning">
                         <h3>Loyalty Points</h3>
-                        <div class="stat-value">0</div>
-                        <p style="color: #6b7280; margin-top: 0.5rem;">Earn points with purchases</p>
+                        <div class="stat-value" id="loyaltyPoints">0</div>
+                        <p id="loyaltyPointsText" style="color: #6b7280; margin-top: 0.5rem;">Earn points with purchases</p>
                     </div>
                 </div>
 
@@ -220,12 +220,14 @@
                             <h3 style="margin: 0 0 1rem 0; color: #10b981;">🛍️ Shopping Cart & Checkout</h3>
                             <div style="display: grid; gap: 1rem;">
                                 <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
-                                    <h4 style="margin: 0 0 1rem 0;">Shopping Cart (0 items)</h4>
-                                    <div style="text-align: center; padding: 2rem; color: #6b7280;">
-                                        <div style="font-size: 3rem; margin-bottom: 1rem;">🛒</div>
-                                        <h5 style="margin: 0 0 0.5rem 0; color: #374151;">Your cart is empty</h5>
-                                        <p style="margin: 0 0 1.5rem 0;">Browse our books and add items to get started</p>
-                                        <a href="#browse" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Start Shopping</a>
+                                    <h4 style="margin: 0 0 1rem 0;">Shopping Cart (<span id="cartItemCount">0</span> items)</h4>
+                                    <div id="cartContent">
+                                        <div style="text-align: center; padding: 2rem; color: #6b7280;">
+                                            <div style="font-size: 3rem; margin-bottom: 1rem;">🛒</div>
+                                            <h5 style="margin: 0 0 0.5rem 0; color: #374151;">Your cart is empty</h5>
+                                            <p style="margin: 0 0 1.5rem 0;">Browse our books and add items to get started</p>
+                                            <a href="#browse" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Start Shopping</a>
+                                        </div>
                                     </div>
                                 </div>
                                 
@@ -322,23 +324,23 @@
                                         <h4 style="margin: 0 0 1rem 0;">Order Summary</h4>
                                         <div style="display: grid; gap: 0.75rem;">
                                             <div style="display: flex; justify-content: space-between;">
-                                                <span>Subtotal (0 items)</span>
-                                                <span>$0.00</span>
+                                                <span>Subtotal (<span id="orderItemCount">0</span> items)</span>
+                                                <span id="subtotalAmount">$0.00</span>
                                             </div>
                                             <div style="display: flex; justify-content: space-between;">
                                                 <span>Member Discount</span>
-                                                <span style="color: #6b7280;">$0.00</span>
+                                                <span id="discountAmount" style="color: #6b7280;">$0.00</span>
                                             </div>
                                             <div style="display: flex; justify-content: space-between;">
                                                 <span>Shipping</span>
-                                                <span style="color: #6b7280;">TBD</span>
+                                                <span id="shippingAmount" style="color: #6b7280;">TBD</span>
                                             </div>
                                             <div style="display: flex; justify-content: space-between; padding-top: 0.75rem; border-top: 1px solid #e5e7eb; font-weight: 600; font-size: 1.125rem;">
                                                 <span>Total</span>
-                                                <span>$0.00</span>
+                                                <span id="totalAmount">$0.00</span>
                                             </div>
                                         </div>
-                                        <div style="text-align: center; margin-top: 1rem; padding: 1rem; background: #f9fafb; border-radius: 0.5rem; color: #6b7280;">
+                                        <div id="orderSummaryMessage" style="text-align: center; margin-top: 1rem; padding: 1rem; background: #f9fafb; border-radius: 0.5rem; color: #6b7280;">
                                             <p style="margin: 0; font-size: 0.875rem;">Add items to your cart to see pricing</p>
                                         </div>
                                     </div>
@@ -385,10 +387,10 @@
                                             </div>
                                         </div>
                                         <div style="display: flex; gap: 1rem; align-items: center;">
-                                            <button class="btn btn-secondary" style="padding: 1rem 2rem; font-size: 1.125rem; flex: 1; opacity: 0.5; cursor: not-allowed;" disabled>Add Items to Cart First</button>
+                                            <button id="paymentButton" class="btn btn-secondary" style="padding: 1rem 2rem; font-size: 1.125rem; flex: 1; opacity: 0.5; cursor: not-allowed;" disabled>Add Items to Cart First</button>
                                             <div style="display: flex; align-items: center; gap: 0.5rem; color: #6b7280; font-size: 0.875rem;">
-                                                <span>🛒</span>
-                                                <span>Cart Empty</span>
+                                                <span id="paymentIcon">🛒</span>
+                                                <span id="paymentStatus">Cart Empty</span>
                                             </div>
                                         </div>
                                     </div>
@@ -463,11 +465,13 @@
                                 
                                 <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
                                     <h4 style="margin: 0 0 1rem 0;">My Event Registrations</h4>
-                                    <div style="text-align: center; padding: 2rem; color: #6b7280;">
-                                        <div style="font-size: 3rem; margin-bottom: 1rem;">📅</div>
-                                        <h5 style="margin: 0 0 0.5rem 0; color: #374151;">No events registered</h5>
-                                        <p style="margin: 0 0 1.5rem 0;">Browse upcoming events and register to attend</p>
-                                        <button class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Browse Events</button>
+                                    <div id="eventRegistrationsContent">
+                                        <div style="text-align: center; padding: 2rem; color: #6b7280;">
+                                            <div style="font-size: 3rem; margin-bottom: 1rem;">📅</div>
+                                            <h5 style="margin: 0 0 0.5rem 0; color: #374151;">No events registered</h5>
+                                            <p style="margin: 0 0 1.5rem 0;">Browse upcoming events and register to attend</p>
+                                            <button class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Browse Events</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -484,11 +488,13 @@
                             <div style="display: grid; gap: 1rem;">
                                 <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
                                     <h4 style="margin: 0 0 1rem 0;">Recent Orders</h4>
-                                    <div style="text-align: center; padding: 2rem; color: #6b7280;">
-                                        <div style="font-size: 3rem; margin-bottom: 1rem;">📦</div>
-                                        <h5 style="margin: 0 0 0.5rem 0; color: #374151;">No orders yet</h5>
-                                        <p style="margin: 0 0 1.5rem 0;">Your order history will appear here after you make a purchase</p>
-                                        <a href="#browse" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Start Shopping</a>
+                                    <div id="orderHistoryContent">
+                                        <div style="text-align: center; padding: 2rem; color: #6b7280;">
+                                            <div style="font-size: 3rem; margin-bottom: 1rem;">📦</div>
+                                            <h5 style="margin: 0 0 0.5rem 0; color: #374151;">No orders yet</h5>
+                                            <p style="margin: 0 0 1.5rem 0;">Your order history will appear here after you make a purchase</p>
+                                            <a href="#browse" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Start Shopping</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -598,11 +604,13 @@
                             <div style="display: grid; gap: 1rem;">
                                 <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
                                     <h4 style="margin: 0 0 1rem 0;">Recommended for You</h4>
-                                    <div style="text-align: center; padding: 2rem; color: #6b7280;">
-                                        <div style="font-size: 3rem; margin-bottom: 1rem;">🤖</div>
-                                        <h5 style="margin: 0 0 0.5rem 0; color: #374151;">No recommendations yet</h5>
-                                        <p style="margin: 0 0 1.5rem 0;">Start browsing and purchasing books to get personalized recommendations</p>
-                                        <a href="#browse" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Browse Books</a>
+                                    <div id="recommendationsContent">
+                                        <div style="text-align: center; padding: 2rem; color: #6b7280;">
+                                            <div style="font-size: 3rem; margin-bottom: 1rem;">🤖</div>
+                                            <h5 style="margin: 0 0 0.5rem 0; color: #374151;">No recommendations yet</h5>
+                                            <p style="margin: 0 0 1.5rem 0;">Start browsing and purchasing books to get personalized recommendations</p>
+                                            <a href="#browse" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Browse Books</a>
+                                        </div>
                                     </div>
                                 </div>
                                 
@@ -649,13 +657,15 @@
                             <div style="display: grid; gap: 1rem;">
                                 <div style="padding: 1rem; background: white; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
                                     <h4 style="margin: 0 0 1rem 0;">My Profile & Preferences</h4>
-                                    <div style="text-align: center; padding: 2rem; color: #6b7280;">
-                                        <div style="font-size: 3rem; margin-bottom: 1rem;">👤</div>
-                                        <h5 style="margin: 0 0 0.5rem 0; color: #374151;">Create your profile</h5>
-                                        <p style="margin: 0 0 1.5rem 0;">Sign in or create an account to save your preferences and track your orders</p>
-                                        <div style="display: flex; gap: 1rem; justify-content: center;">
-                                            <a href="login.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Sign In</a>
-                                            <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem;">Create Account</button>
+                                    <div id="profileContent">
+                                        <div style="text-align: center; padding: 2rem; color: #6b7280;">
+                                            <div style="font-size: 3rem; margin-bottom: 1rem;">👤</div>
+                                            <h5 style="margin: 0 0 0.5rem 0; color: #374151;">Create your profile</h5>
+                                            <p style="margin: 0 0 1.5rem 0;">Sign in or create an account to save your preferences and track your orders</p>
+                                            <div style="display: flex; gap: 1rem; justify-content: center;">
+                                                <a href="login.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Sign In</a>
+                                                <button class="btn btn-secondary" style="padding: 0.75rem 1.5rem;">Create Account</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -682,5 +692,328 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Customer Portal Sign-in State Management
+        let isSignedIn = false;
+        let customerData = {
+            name: "Sarah Johnson",
+            email: "sarah.johnson@email.com",
+            booksPurchased: 47,
+            eventsAttended: 8,
+            wishlistItems: 12,
+            loyaltyPoints: 2450,
+            orders: [
+                {
+                    id: "ORD-2025-892",
+                    date: "Oct 15, 2025",
+                    items: 3,
+                    total: 67.50,
+                    status: "Delivered"
+                },
+                {
+                    id: "ORD-2025-893",
+                    date: "Oct 16, 2025",
+                    items: 1,
+                    total: 24.99,
+                    status: "In Transit"
+                }
+            ],
+            eventRegistrations: [
+                {
+                    event: "Sarah Johnson - Book Signing",
+                    date: "Oct 25, 2025",
+                    location: "Downtown Store",
+                    status: "Registered"
+                },
+                {
+                    event: "Writing Workshop",
+                    date: "Nov 8, 2025",
+                    location: "Flagship Store",
+                    status: "Registered"
+                }
+            ],
+            recommendations: [
+                {
+                    title: "The Midnight Library",
+                    author: "Matt Haig",
+                    reason: "Based on your love for 'Mysteries of the Past'"
+                },
+                {
+                    title: "Project Hail Mary",
+                    author: "Andy Weir",
+                    reason: "Similar to 'Echoes of Tomorrow'"
+                }
+            ]
+        };
+
+        // Check if user is signed in (simulate with URL parameter or localStorage)
+        function checkSignInStatus() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const signedIn = urlParams.get('signedin') === 'true';
+            const storedStatus = localStorage.getItem('customerSignedIn') === 'true';
+            
+            isSignedIn = signedIn || storedStatus;
+            
+            if (isSignedIn) {
+                updateUIForSignedInUser();
+            } else {
+                updateUIForGuestUser();
+            }
+        }
+
+        function updateUIForSignedInUser() {
+            // Update welcome message
+            document.getElementById('welcomeMessage').textContent = `Welcome back, ${customerData.name}! Discover your next great read`;
+            
+            // Update customer metrics
+            document.getElementById('booksPurchased').textContent = customerData.booksPurchased;
+            document.getElementById('booksPurchasedText').textContent = 'This year';
+            
+            document.getElementById('eventsAttended').textContent = customerData.eventsAttended;
+            document.getElementById('eventsAttendedText').textContent = 'Author events';
+            
+            document.getElementById('wishlistItems').textContent = customerData.wishlistItems;
+            document.getElementById('wishlistItemsText').textContent = 'Books saved';
+            
+            document.getElementById('loyaltyPoints').textContent = customerData.loyaltyPoints.toLocaleString();
+            document.getElementById('loyaltyPointsText').textContent = 'Available to redeem';
+            
+            // Update shopping cart with sample items
+            updateShoppingCart();
+            
+            // Update event registrations
+            updateEventRegistrations();
+            
+            // Update order history
+            updateOrderHistory();
+            
+            // Update AI recommendations
+            updateRecommendations();
+            
+            // Update profile
+            updateProfile();
+        }
+
+        function updateUIForGuestUser() {
+            // Keep the current empty state (already set in HTML)
+            // This is the default state for non-signed-in users
+        }
+
+        function updateShoppingCart() {
+            // Sample cart items for signed-in user
+            const cartContent = `
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Book</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                        <div style="width: 40px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 0.25rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                            📖
+                                        </div>
+                                        <div>
+                                            <strong>Mysteries of the Past</strong>
+                                            <p style="margin: 0; color: #6b7280; font-size: 0.875rem;">by Sarah Johnson</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>$24.99</td>
+                                <td>
+                                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                        <button style="width: 30px; height: 30px; border: 1px solid #e5e7eb; background: white; border-radius: 0.25rem; cursor: pointer;">-</button>
+                                        <span>1</span>
+                                        <button style="width: 30px; height: 30px; border: 1px solid #e5e7eb; background: white; border-radius: 0.25rem; cursor: pointer;">+</button>
+                                    </div>
+                                </td>
+                                <td>$24.99</td>
+                                <td><button class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Remove</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            
+            document.getElementById('cartContent').innerHTML = cartContent;
+            document.getElementById('cartItemCount').textContent = '1';
+            
+            // Update order summary
+            document.getElementById('orderItemCount').textContent = '1';
+            document.getElementById('subtotalAmount').textContent = '$24.99';
+            document.getElementById('discountAmount').textContent = '-$2.50';
+            document.getElementById('shippingAmount').textContent = 'Free';
+            document.getElementById('totalAmount').textContent = '$22.49';
+            document.getElementById('orderSummaryMessage').innerHTML = '<p style="margin: 0; font-size: 0.875rem;">Member discount applied</p>';
+            
+            // Update payment button
+            document.getElementById('paymentButton').textContent = 'Place Order - $22.49';
+            document.getElementById('paymentButton').className = 'btn btn-primary';
+            document.getElementById('paymentButton').style.opacity = '1';
+            document.getElementById('paymentButton').disabled = false;
+            document.getElementById('paymentIcon').textContent = '🔒';
+            document.getElementById('paymentStatus').textContent = 'Secure Payment';
+        }
+
+        function updateEventRegistrations() {
+            const eventContent = `
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Event</th>
+                                <th>Date</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${customerData.eventRegistrations.map(event => `
+                                <tr>
+                                    <td><strong>${event.event}</strong></td>
+                                    <td>${event.date}</td>
+                                    <td>${event.location}</td>
+                                    <td><span class="badge badge-success">${event.status}</span></td>
+                                    <td><button class="btn btn-secondary" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">View Details</button></td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            
+            document.getElementById('eventRegistrationsContent').innerHTML = eventContent;
+        }
+
+        function updateOrderHistory() {
+            const orderContent = `
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Date</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${customerData.orders.map(order => `
+                                <tr>
+                                    <td><strong>${order.id}</strong></td>
+                                    <td>${order.date}</td>
+                                    <td>${order.items} books</td>
+                                    <td>$${order.total}</td>
+                                    <td><span class="badge badge-${order.status === 'Delivered' ? 'success' : 'info'}">${order.status}</span></td>
+                                    <td><button class="btn btn-${order.status === 'In Transit' ? 'primary' : 'secondary'}" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">${order.status === 'In Transit' ? 'Track' : 'View'}</button></td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            
+            document.getElementById('orderHistoryContent').innerHTML = orderContent;
+        }
+
+        function updateRecommendations() {
+            const recommendationsContent = `
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    ${customerData.recommendations.map(rec => `
+                        <div style="padding: 1rem; background: #f9fafb; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                            <div style="width: 60px; height: 90px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 0.25rem; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                📖
+                            </div>
+                            <h5 style="margin: 0 0 0.5rem 0; font-size: 1rem;">${rec.title}</h5>
+                            <p style="margin: 0 0 0.5rem 0; color: #6b7280; font-size: 0.875rem;">by ${rec.author}</p>
+                            <p style="margin: 0 0 0.75rem 0; color: #6b7280; font-size: 0.75rem;">${rec.reason}</p>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Add to Cart</button>
+                                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Wishlist</button>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            
+            document.getElementById('recommendationsContent').innerHTML = recommendationsContent;
+        }
+
+        function updateProfile() {
+            const profileContent = `
+                <div style="display: grid; gap: 1rem;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">First Name</label>
+                            <input type="text" value="${customerData.name.split(' ')[0]}" style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Last Name</label>
+                            <input type="text" value="${customerData.name.split(' ')[1]}" style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem;">
+                        </div>
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email</label>
+                        <input type="email" value="${customerData.email}" style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Phone</label>
+                        <input type="tel" value="(555) 123-4567" style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Preferred Store</label>
+                        <select style="width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem;">
+                            <option>Downtown Store</option>
+                            <option>Flagship Store</option>
+                            <option>Uptown Plaza</option>
+                            <option>Westside Mall</option>
+                        </select>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('profileContent').innerHTML = profileContent;
+        }
+
+        // Add sign-in/sign-out functionality
+        function signIn() {
+            isSignedIn = true;
+            localStorage.setItem('customerSignedIn', 'true');
+            updateUIForSignedInUser();
+        }
+
+        function signOut() {
+            isSignedIn = false;
+            localStorage.removeItem('customerSignedIn');
+            updateUIForGuestUser();
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            checkSignInStatus();
+            
+            // Add event listeners for sign-in/sign-out buttons
+            const signInButtons = document.querySelectorAll('a[href="login.html"]');
+            signInButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Simulate sign-in process
+                    setTimeout(() => {
+                        signIn();
+                    }, 1000);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
